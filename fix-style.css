@@ -1,0 +1,55 @@
+/* fix-space.css - Remove extra top space */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0 !important;
+    padding: 0 !important;
+    overflow-x: hidden;
+}
+
+.site-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70px;
+    z-index: 1000;
+    background: rgba(26, 31, 53, 0.95);
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+body {
+    padding-top: 70px !important;
+}
+
+main {
+    padding-top: 0 !important;
+    margin-top: 0 !important;
+}
+
+.hero {
+    padding-top: 40px !important;
+    padding-bottom: 80px !important;
+    margin-top: 0 !important;
+}
+
+/* Fix for mobile responsiveness */
+@media (max-width: 768px) {
+    .site-header {
+        height: 60px;
+    }
+    
+    body {
+        padding-top: 60px !important;
+    }
+    
+    .hero {
+        padding-top: 30px !important;
+        padding-bottom: 60px !important;
+    }
+}
